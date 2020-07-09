@@ -1,11 +1,11 @@
-## Robot Learning 
+CmpE 58Y - Robot Learning
 * Q-learning
 * Sarsa
 * Affordance learning
 
-## Computer Vision
+UAV-IN Drone Computer Vision 
 * Object detection and tracking
 * Distance estimation
 
-## Agent-based Modeling
-* The El Farol Bar Problem
+IE 588 - Agent-based Modeling and Simulation
+* Final Project: The El Farol Bar Problem
