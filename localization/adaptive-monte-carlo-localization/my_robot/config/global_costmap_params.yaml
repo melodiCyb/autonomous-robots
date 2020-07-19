@@ -1,0 +1,11 @@
+global_costmap:
+   global_frame: map
+   robot_base_frame: robot_footprint
+   update_frequency: 1.0
+   publish_frequency: 0.5
+   width: 30.0
+   height: 30.0
+   resolution: 0.01
+   static_map: true
+   rolling_window: true
+##inflation_radius: 0.55

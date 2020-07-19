@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <!-- robot pose -->
+  <arg name="x" default="3.56"/>
+  <arg name="y" default="0.04"/>
+  <arg name="z" default="0.1"/>
+  <arg name="roll" default="0"/>
+  <arg name="pitch" default="0"/>
+  <arg name="yaw" default="0"/>
+
+  <include file="$(find my_robot)/launch/robot_description.launch"/>
+
+  <!-- world file -->
+  <arg name="world_file" default="$(find my_robot)/worlds/livingroom.world"/>
+
+  <!-- launch Gazebo world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="use_sim_time" value="true"/>
+    <arg name="debug" value="false"/>
+    <arg name="gui" value="true" />
+    <arg name="world_name" value="$(arg world_file)"/>
+  </include>
+
+  <!-- find my robot description -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find my_robot)/urdf/mini_robot.xacro'"/>
+ 
+  <!-- spawn my robot  --> 
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" 
+        args="-urdf -param robot_description -model mini_robot
+              -x $(arg x) -y $(arg y) -z $(arg z)
+              -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
+
+
+ 
+</launch>
