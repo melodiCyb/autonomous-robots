@@ -14,6 +14,10 @@ IE 588 - Agent-based Modeling and Simulation
 Computer Vision 
 * CV applications for drones and mobile robots
 
+![drone-color-tracker](https://github.com/melodiCyb/autonomous-robots/blob/master/computer-vision/drone_pink_target_tracker.gif)
+
+![baxter-drawing](https://github.com/melodiCyb/autonomous-robots/blob/master/computer-vision/baxter_drawing_cat.gif)
+
 Localization
 * Kalman Filters 
 * Monte Carlo localization 
